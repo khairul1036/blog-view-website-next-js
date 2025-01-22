@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Blog",
+  title: "BlogNest",
   description: "my blog website",
 };
 
