@@ -3,8 +3,10 @@ import Link from "next/link";
 
 const Navbar = async () => {
   const { getUser } = getKindeServerSession();
+  
+  // Directly await the user data, assuming it's available
   const user = await getUser();
-  //   console.log(user);
+
   return (
     <div className="bg-gray-100">
       <nav className="max-w-screen-xl mx-auto flex justify-between py-5">
