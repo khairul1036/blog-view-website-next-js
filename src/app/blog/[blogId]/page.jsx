@@ -1,6 +1,8 @@
 const BlogDetails = async ({ params }) => {
-  const {blogId} = await params;  // No need to await params, it's already an object
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${blogId}`);
+  const { blogId } = await params;
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${blogId}`
+  );
 
   if (!res.ok) {
     return <div>Error fetching blog details.</div>;
@@ -9,9 +11,11 @@ const BlogDetails = async ({ params }) => {
   const singleBlog = await res.json();
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-gray-50">
-      {/* Blog Card */}
-      <div className="bg-white p-6 rounded-lg shadow-lg mb-8">
+    <div className="max-w-3xl mx-auto px-6">
+      <h1 className="text-3xl text-gray-600 font-bold mb-8 text-center pt-5 md:pt-10 border-b pb-2">
+        Blog Details
+      </h1>
+      <div className="mb-8">
         <h1 className="text-3xl font-semibold text-gray-800 mb-4">
           {singleBlog.title}
         </h1>
@@ -23,8 +27,7 @@ const BlogDetails = async ({ params }) => {
         </div>
       </div>
 
-      {/* Blog Details */}
-      <div className="bg-white p-6 rounded-lg shadow-lg">
+      <div className="flex gap-5">
         <p className="text-sm text-gray-500">
           <strong>Post ID:</strong> {singleBlog.id}
         </p>

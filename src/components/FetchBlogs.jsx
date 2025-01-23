@@ -1,11 +1,13 @@
 import Link from "next/link";
 
-const FetchBlogs = ({ id, title, body }) => {
-  // .log(data);
+const FetchBlogs = ({ id, title }) => {
+
   return (
     <>
       <Link href={`/blog/${id}`}>
-        <h2 className="border border-gray-600 px-4 py-2 rounded-lg hover:text-blue-600">{id}. {title}</h2>
+        <h2 className="border border-gray-200 text-gray-700 hover:bg-teal-500 px-4 py-3 rounded-lg hover:text-white">
+          {id}. {title}
+        </h2>
       </Link>
     </>
   );

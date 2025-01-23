@@ -8,35 +8,29 @@ const Navbar = async () => {
 
   return (
     <div className="bg-gray-100">
-      <nav className="max-w-screen-xl mx-auto flex justify-between py-5">
+      <nav className="max-w-screen-xl mx-auto flex justify-between px-5 py-5">
         <div>
-          <Link href={"/"}>Logo</Link>
+          <Link href={"/"} className="text-lg md:text-2xl font-bold">Blog<span className="text-teal-600">Nest</span></Link>
         </div>
-        <div className="flex gap-5">
+        <div className="flex gap-1 md:gap-5">
           <Link
             href={"/"}
-            className="border border-gray-700 rounded-lg px-2 py-1"
+            className="text-sm md:text-base border border-gray-300 hover:bg-teal-500 hover:text-white rounded-lg px-2 py-1"
           >
             Home
           </Link>
           <Link
             href={user ? "/profile" : "/api/auth/login"}
-            className="border border-gray-700 rounded-lg px-2 py-1"
+            className="text-sm md:text-base border border-gray-300 hover:bg-teal-500 hover:text-white rounded-lg px-2 py-1"
           >
             Profile
           </Link>
           {user ? (
-            <LogoutLink className="border border-gray-700 rounded-lg px-2 py-1 bg-red-500 text-white">Log out</LogoutLink>
-            // <Link
-            //   href={"/api/auth/logout"}
-            //   className="border border-gray-700 rounded-lg px-2 py-1 bg-red-500 text-white"
-            // >
-            //   Logout
-            // </Link>
+            <LogoutLink className="text-sm md:text-base border border-gray-300 hover:bg-teal-500 hover:text-white rounded-lg px-2 py-1 bg-red-500 text-white">Logout </LogoutLink>
           ) : (
             <Link
               href={"/api/auth/login"}
-              className="border border-gray-700 rounded-lg px-2 py-1 bg-blue-500 text-white"
+              className="text-sm md:text-base border border-gray-300 hover:bg-teal-500 hover:text-white rounded-lg px-2 py-1 bg-teal-500 text-white"
             >
               Login
             </Link>

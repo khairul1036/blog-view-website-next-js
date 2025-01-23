@@ -8,8 +8,13 @@ const Home = async () => {
   return (
     <>
       <div>
-        <h1 className="text-3xl font-bold mb-8">Blog Posts</h1>
-        <div className="grid grid-cols-1 gap-5 px-10">
+        <h1 className="text-3xl font-bold mb-8 text-center pt-5 md:pt-10">
+          Blog Title
+        </h1>
+        <p className="text-gray-500 text-center pb-3 md:pb-0">
+          Click blog title to read
+        </p>
+        <div className="max-w-screen-xl mx-auto  px-5 md:py-5 grid grid-cols-1 gap-5">
           {data?.length > 0 ? (
             data.map((blog) => (
               <FetchBlogs
