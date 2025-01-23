@@ -1,19 +1,20 @@
-// import { withAuth } from "@kinde-oss/kinde-auth-nextjs/middleware";
+import { withAuth } from "@kinde-oss/kinde-auth-nextjs/middleware";
 
-// export const config = {
-//   matcher: [
-//     /*
-//      * Match all request paths except for the ones starting with:
-//      * - api (API routes)
-//      * - _next/static (static files)
-//      * - _next/image (image optimization files)
-//      * - favicon.ico, sitemap.xml, robots.txt (metadata files)
-//      */
-//     '/((?!api|about|privacypolicy|termsofservice|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|$).*)',
-//   ],
-// }
+export const config = {
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico, sitemap.xml, robots.txt (metadata files)
+     */
+    "/profile",
+    // '/((?!api|about|privacypolicy|termsofservice|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|$).*)',
+  ],
+}
 
-// export default withAuth;
+export default withAuth;
 
 // import { withAuth } from "@kinde-oss/kinde-auth-nextjs/middleware";
 
@@ -38,18 +39,18 @@
 
 // middleware.js
 // middleware.js (Next.js 13+ style)
-import { NextResponse } from 'next/server';
+// import { NextResponse } from 'next/server';
 
-export function middleware(req) {
-  const res = NextResponse.next();
-  res.headers.set('Access-Control-Allow-Origin', '*');
-  res.headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.headers.set('Access-Control-Allow-Headers', 'Content-Type');
+// export function middleware(req) {
+//   const res = NextResponse.next();
+//   res.headers.set('Access-Control-Allow-Origin', '*');
+//   res.headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+//   res.headers.set('Access-Control-Allow-Headers', 'Content-Type');
 
-  // Handling OPTIONS method for CORS preflight request
-  if (req.method === 'OPTIONS') {
-    return res;
-  }
+//   // Handling OPTIONS method for CORS preflight request
+//   if (req.method === 'OPTIONS') {
+//     return res;
+//   }
 
-  return res;
-}
+//   return res;
+// }
