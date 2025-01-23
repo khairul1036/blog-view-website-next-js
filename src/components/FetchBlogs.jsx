@@ -3,15 +3,11 @@ import Link from "next/link";
 const FetchBlogs = ({ id, title, body }) => {
   // .log(data);
   return (
-    <div className="card card-compact bg-base-100 shadow-xl">
-      <div className="card-body">
-        <h2 className="card-title">{title}</h2>
-        <p>{body}</p>
-        <div className="card-actions justify-end">
-          <Link href={`/blog/${id}`}><button className="btn btn-primary">View Details</button></Link>
-        </div>
-      </div>
-    </div>
+    <>
+      <Link href={`/blog/${id}`}>
+        <h2 className="border border-gray-600 px-4 py-2 rounded-lg hover:text-blue-600">{id}. {title}</h2>
+      </Link>
+    </>
   );
 };
 

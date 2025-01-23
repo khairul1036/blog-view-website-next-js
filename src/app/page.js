@@ -9,7 +9,7 @@ const Home = async () => {
     <>
       <div>
         <h1>Home</h1>
-        <div className="grid grid-cols-3 gap-5 px-10">
+        <div className="grid grid-cols-1 gap-5 px-10">
           {data?.length > 0 ? (
             data.map((blog) => (
               <FetchBlogs

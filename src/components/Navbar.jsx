@@ -29,14 +29,14 @@ const Navbar = async () => {
           {user ? (
             <Link
               href={"/api/auth/logout"}
-              className="border border-gray-700 rounded-lg px-2 py-1"
+              className="border border-gray-700 rounded-lg px-2 py-1 bg-red-500 text-white"
             >
               Logout
             </Link>
           ) : (
             <Link
               href={"/api/auth/login"}
-              className="border border-gray-700 rounded-lg px-2 py-1"
+              className="border border-gray-700 rounded-lg px-2 py-1 bg-blue-500 text-white"
             >
               Login
             </Link>
