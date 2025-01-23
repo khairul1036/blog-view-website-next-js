@@ -1,5 +1,5 @@
 const BlogDetails = async ({ params }) => {
-  const { blogId } = params;  // No need to await params, it's already an object
+  const {blogId} = await params;  // No need to await params, it's already an object
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${blogId}`);
 
   if (!res.ok) {
