@@ -2,6 +2,9 @@
 
 BlogNest is a simple blog viewer application built with **Next.js** that demonstrates key web development concepts including routing, server and client components, dynamic routes, authentication, and data fetching. This app allows users to view blog posts, read details about specific posts, and access a protected profile page.
 
+## Live Site URL
+[BlogNest Live Site](https://blog-view-delta.vercel.app)
+
 ## Features
 
 - **Home Page**: Displays a list of blog post titles fetched from a mock API.
