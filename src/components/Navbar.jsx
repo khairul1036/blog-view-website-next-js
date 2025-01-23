@@ -3,8 +3,6 @@ import Link from "next/link";
 
 const Navbar = async () => {
   const { getUser } = getKindeServerSession();
-
-  // Directly await the user data, assuming it's available
   const user = await getUser();
 
   return (

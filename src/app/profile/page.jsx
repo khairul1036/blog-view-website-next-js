@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 const Profile = async () => {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
-
+  // console.log(user);
   if (!user) {
     return redirect("/api/auth/login");
   }
@@ -15,6 +15,7 @@ const Profile = async () => {
         Welcome to your profile, {user?.given_name}!
       </h1>
       <p className="text-lg text-gray-700">You are logged in.</p>
+      <p className="text-lg text-gray-700">Email: {user?.email}</p>
     </div>
   );
 };
