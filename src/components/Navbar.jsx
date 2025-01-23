@@ -3,14 +3,16 @@ import Link from "next/link";
 
 const Navbar = async () => {
   const { getUser } = getKindeServerSession();
-  
+
   // Directly await the user data, assuming it's available
   const user = await getUser();
 
   return (
     <div className="bg-gray-100">
       <nav className="max-w-screen-xl mx-auto flex justify-between py-5">
-        <div>Logo</div>
+        <div>
+          <Link href={"/"}>Logo</Link>
+        </div>
         <div className="flex gap-5">
           <Link
             href={"/"}
